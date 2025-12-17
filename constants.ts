@@ -214,7 +214,7 @@ export const WORKSHEETS: Worksheet[] = [
         "id": "Q9",
         "category": "Practice",
         "styleVariant": "notebook",
-        "instruction_mk": "Ова е дел од домашната задача на Су. (а) Користи калкулатор за да ја провериш домашната задача на Су. (б) Објасни ги сите грешки што таа ги направила и напиши ги точните одговори.",
+        "instruction_mk": "Ова е дел од домашната задача на Сузана. (а) Користи калкулатор за да ја провериш домашната задача на Сузана. (б) Објасни ги сите грешки што таа ги направила и напиши ги точните одговори.",
         "prompt_en": "This is part of Su's homework. (a) Use a calculator to check Su's homework. (b) Explain any mistakes she has made and write the correct answers.",
         "math_elements_latex": [
           "i) \\;\\; \\frac{7}{24} = 0.291\\dot{6}",

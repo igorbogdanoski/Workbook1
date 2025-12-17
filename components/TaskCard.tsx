@@ -654,7 +654,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
             <div className="w-full my-8 shadow-md border border-slate-300 transform -rotate-1 origin-top-left overflow-hidden" style={notebookStyle}>
                 <div className="p-8 pl-16 text-2xl text-blue-900 w-full min-h-[300px]">
                     <h4 className="font-bold underline mb-6 text-slate-700 opacity-80 text-xl font-sans not-italic">
-                        Домашна работа на Су:
+                        Домашна работа на Сузана:
                     </h4>
                     {/* Render items in a responsive grid/flex layout to use the full width */}
                     <div className="flex flex-wrap gap-x-12 gap-y-2">
