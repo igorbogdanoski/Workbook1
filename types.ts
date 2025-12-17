@@ -17,9 +17,21 @@ export interface Task {
   prompt_en: string;
   // New field to explicitly define behavior, defaults to 'standard' if not present
   taskType?: 'standard' | 'matching' | 'sorting' | 'notebook'; 
+  // NEW: Defines the input method for standard tasks
+  inputType?: 'text' | 'fraction' | 'mixed_number';
+  
   math_elements_latex?: string[];
   math_groups?: { title?: string; items: string[] }[];
+  
+  // Standard inputs
   subtasks?: Subtask[];
+  
+  // NEW: Hybrid support - allows adding a sorting component to ANY task
+  sortingItems?: string[]; 
+
+  // NEW: Explicit instruction for a free text area (e.g. "Explain your answer")
+  freeTextInstruction?: string;
+
   answers?: Record<string, string[]>;
   speechBubble?: SpeechBubbleData;
   tip?: string;

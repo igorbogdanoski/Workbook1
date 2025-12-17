@@ -36,94 +36,145 @@ export const WORKSHEETS: Worksheet[] = [
       {
         "id": "Q1",
         "category": "Focus",
-        "instruction_mk": "Поврзи ја секоја дропка со соодветниот еквивалентен децимален број. Напиши дали дропката е конечен децимален број (terminating decimal) или периодичен децимален број (recurring decimal).",
-        "prompt_en": "Match each unit fraction with the correct equivalent decimal. Write if the fraction is a terminating decimal or a recurring decimal.",
+        "taskType": "matching",
+        "instruction_mk": "Поврзи ја секоја дропка со соодветниот еквивалентен децимален број со влечење на децималните картички во соодветните полиња.",
+        "prompt_en": "Match each unit fraction with the correct equivalent decimal by dragging the decimal cards into the corresponding slots.",
         "tip": "Запомни: Кога повеќе цифри се повторуваат во децимален број, ставаш точка само над првата и последната цифра што се повторува, на пр. $\\frac{1}{7} = 0.\\dot{1}4285\\dot{7}$",
         "math_groups": [
           {
-            "title": "Дропки",
+            "title": "Дропки (Цел)",
             "items": ["\\frac{1}{2}", "\\frac{1}{3}", "\\frac{1}{4}", "\\frac{1}{5}", "\\frac{1}{6}", "\\frac{1}{7}", "\\frac{1}{8}", "\\frac{1}{9}", "\\frac{1}{10}"]
           },
           {
-            "title": "Децимални броеви",
+            "title": "Децимални броеви (Извор)",
             "items": ["0.1\\overline{6}", "0.25", "0.\\overline{3}", "0.5", "0.2", "0.\\overline{142857}", "0.125", "0.\\overline{1}", "0.1"]
           }
         ],
         "answers": {
-          "main": ["checking..."] // Placeholder, this is a matching task requiring a different UI interaction later
+          "\\frac{1}{2}": ["0.5"],
+          "\\frac{1}{3}": ["0.\\overline{3}"],
+          "\\frac{1}{4}": ["0.25"],
+          "\\frac{1}{5}": ["0.2"],
+          "\\frac{1}{6}": ["0.1\\overline{6}"],
+          "\\frac{1}{7}": ["0.\\overline{142857}"],
+          "\\frac{1}{8}": ["0.125"],
+          "\\frac{1}{9}": ["0.\\overline{1}"],
+          "\\frac{1}{10}": ["0.1"]
         }
       },
       {
         "id": "Q2",
         "category": "Focus",
-        "instruction_mk": "Копирај и комплетирај ги операциите за да ја претвориш секоја дропка во децимален број. Напиши само децимален број (на пр. 0.4).",
-        "prompt_en": "Copy and complete the workings to convert each fraction into a decimal. Write if the fraction is a terminating or recurring decimal.",
+        "taskType": "matching",
+        "instruction_mk": "Поврзи ја секоја дропка со точниот децимален број со влечење. (Копирај ги решенијата во тетратка за да ги провериш дали се конечни или периодични).",
+        "prompt_en": "Match each fraction with the correct decimal. Copy the workings into your notebook.",
         "tip": "Запомни: Можеби ќе треба да го продолжиш делењето на повеќе од две децимални места.",
-        "subtasks": [
-          {"a": "\\frac{2}{5} = 0.4"},
-          {"b": "\\frac{2}{3} = 0.\\overline{6}"},
-          {"c": "\\frac{3}{4}"},
-          {"d": "\\frac{3}{5}"},
-          {"e": "\\frac{5}{6}"},
-          {"f": "\\frac{2}{7}"},
-          {"g": "\\frac{3}{8}"},
-          {"h": "\\frac{4}{9}"},
-          {"i": "\\frac{7}{10}"},
-          {"j": "\\frac{2}{11}"}
-        ],
-        "math_elements_latex": [
-          "\\frac{2}{5}, \\frac{2}{3}, \\frac{3}{4}, \\frac{3}{5}, \\frac{5}{6}, \\frac{2}{7}, \\frac{3}{8}, \\frac{4}{9}, \\frac{7}{10}, \\frac{2}{11}"
+        "math_groups": [
+          {
+            "title": "Дропки",
+            "items": ["a) \\frac{2}{5}", "b) \\frac{2}{3}", "c) \\frac{3}{4}", "d) \\frac{3}{5}", "e) \\frac{5}{6}", "f) \\frac{2}{7}", "g) \\frac{3}{8}", "h) \\frac{4}{9}", "i) \\frac{7}{10}", "j) \\frac{2}{11}"]
+          },
+          {
+            "title": "Децимални Броеви",
+            "items": ["0.4", "0.\\overline{6}", "0.75", "0.6", "0.8\\overline{3}", "0.\\overline{285714}", "0.375", "0.\\overline{4}", "0.7", "0.\\overline{18}"]
+          }
         ],
         "answers": {
-          "a": ["0.4", "0,4"],
-          "b": ["0.6", "0.66", "0.666", "0,6", "0,66"],
-          "c": ["0.75", "0,75"],
-          "d": ["0.6", "0,6"],
-          "e": ["0.83", "0.833", "0,83", "0,833"],
-          "f": ["0.285", "0.28", "0,285"],
-          "g": ["0.375", "0,375"],
-          "h": ["0.44", "0.444", "0,44"],
-          "i": ["0.7", "0,7"],
-          "j": ["0.18", "0.1818", "0,18"]
+          "a) \\frac{2}{5}": ["0.4"],
+          "b) \\frac{2}{3}": ["0.\\overline{6}"],
+          "c) \\frac{3}{4}": ["0.75"],
+          "d) \\frac{3}{5}": ["0.6"],
+          "e) \\frac{5}{6}": ["0.8\\overline{3}"],
+          "f) \\frac{2}{7}": ["0.\\overline{285714}"],
+          "g) \\frac{3}{8}": ["0.375"],
+          "h) \\frac{4}{9}": ["0.\\overline{4}"],
+          "i) \\frac{7}{10}": ["0.7"],
+          "j) \\frac{2}{11}": ["0.\\overline{18}"]
         }
       },
       {
         "id": "Q3",
         "category": "Focus",
-        "instruction_mk": "Користи ги твоите одговори од Прашање 2 за да ги напишеш овие дропки по големина, почнувајќи од најмалата.",
+        "taskType": "sorting",
+        "instruction_mk": "Користи ги твоите одговори од Прашање 2 за да ги подредиш овие дропки по големина, почнувајќи од најмалата (најлево). Влечи ги картичките за да го смениш редоследот.",
         "prompt_en": "Use your answers to Question 2 to write these fractions in order of size, starting with the smallest.",
-        "math_elements_latex": [
-          "\\text{Задачите бараат редење на дропките од Q2: } \\frac{2}{5}, \\frac{2}{3}, \\frac{3}{4}, \\frac{3}{5}, \\frac{5}{6}, \\frac{2}{7}, \\frac{3}{8}, \\frac{4}{9}, \\frac{7}{10}, \\frac{2}{11}"
-        ]
+        "math_groups": [
+            {
+                "title": "Подреди ги дропките",
+                // Initial shuffled order
+                "items": ["\\frac{2}{3}", "\\frac{2}{11}", "\\frac{3}{4}", "\\frac{2}{5}", "\\frac{7}{10}", "\\frac{3}{5}", "\\frac{2}{7}", "\\frac{3}{8}", "\\frac{4}{9}", "\\frac{5}{6}"]
+            }
+        ],
+        "answers": {
+            // Correct order based on values:
+            // 2/11 (0.18), 2/7 (0.28), 3/8 (0.375), 2/5 (0.4), 4/9 (0.44), 3/5 (0.6), 2/3 (0.66), 7/10 (0.7), 3/4 (0.75), 5/6 (0.83)
+            "main": [
+                "\\frac{2}{11}", "\\frac{2}{7}", "\\frac{3}{8}", "\\frac{2}{5}", "\\frac{4}{9}", "\\frac{3}{5}", "\\frac{2}{3}", "\\frac{7}{10}", "\\frac{3}{4}", "\\frac{5}{6}"
+            ]
+        }
       },
       {
         "id": "Q4",
         "category": "Focus",
-        "instruction_mk": "Овде има пет картички со дропки. (а) Без пресметки, дали мислиш дека се конечни или периодични децимали? Објасни. (б) Користи пишан метод за да ја претвориш секоја дропка во децимален број. (в) Напиши ги дропките по големина.",
-        "prompt_en": "Here are five fraction cards. (a) Without doing any calculations, do you think these fractions are terminating or recurring decimals? Explain why. (b) Use a written method to convert each fraction to a decimal. (c) Write the fractions in order of size, starting with the smallest.",
-        "math_elements_latex": [
-          "A: \\frac{7}{8}, B: \\frac{4}{5}, C: \\frac{3}{10}, D: \\frac{2}{20}, E: \\frac{8}{25}"
-        ]
+        "instruction_mk": "Овде има пет картички со дропки. (а) Објасни дали мислиш дека се конечни или периодични децимали. (б) Пресметај ја секоја дропка. (в) Подреди ги по големина.",
+        "prompt_en": "Here are five fraction cards. Explain your prediction, convert them, and then order them.",
+        "freeTextInstruction": "(а) Без пресметки, дали мислиш дека се конечни или периодични децимали? Објасни зошто.",
+        "subtasks": [
+            {"A": "\\frac{7}{8}"},
+            {"B": "\\frac{4}{5}"},
+            {"C": "\\frac{3}{10}"},
+            {"D": "\\frac{2}{20}"},
+            {"E": "\\frac{8}{25}"}
+        ],
+        "sortingItems": ["\\frac{7}{8}", "\\frac{4}{5}", "\\frac{3}{10}", "\\frac{2}{20}", "\\frac{8}{25}"],
+        "answers": {
+            // Answers for calculations
+            "A": ["0.875"],
+            "B": ["0.8"],
+            "C": ["0.3"],
+            "D": ["0.1"],
+            "E": ["0.32"],
+            // Correct order: D (0.1), C (0.3), E (0.32), B (0.8), A (0.875)
+            "sorting": ["\\frac{2}{20}", "\\frac{3}{10}", "\\frac{8}{25}", "\\frac{4}{5}", "\\frac{7}{8}"]
+        }
       },
       {
         "id": "Q5",
         "category": "Focus",
-        "instruction_mk": "Овде има пет картички со дропки. (а) Без пресметки, дали мислиш дека се конечни или периодични децимали? Објасни. (б) Користи пишан метод за да ја претвориш секоја дропка во децимален број. (в) Напиши ги дропките по големина.",
-        "prompt_en": "Here are five fraction cards. (a) Without doing any calculations, do you think these fractions are terminating or recurring decimals? Explain why. (b) Use a written method to convert each fraction to a decimal. (c) Write the fractions in order of size, starting with the smallest.",
-        "math_elements_latex": [
-          "A: \\frac{5}{9}, B: \\frac{1}{3}, C: \\frac{5}{12}, D: \\frac{4}{11}, E: \\frac{8}{15}"
-        ]
+        "instruction_mk": "Овде има пет картички со дропки. (а) Објасни дали мислиш дека се конечни или периодични децимали. (б) Пресметај ја секоја дропка. (в) Подреди ги по големина.",
+        "prompt_en": "Here are five fraction cards. Explain your prediction, convert them, and then order them.",
+        "freeTextInstruction": "(а) Без пресметки, дали мислиш дека се конечни или периодични децимали? Објасни зошто.",
+        "subtasks": [
+            {"A": "\\frac{5}{9}"},
+            {"B": "\\frac{1}{3}"},
+            {"C": "\\frac{5}{12}"},
+            {"D": "\\frac{4}{11}"},
+            {"E": "\\frac{8}{15}"}
+        ],
+        "sortingItems": ["\\frac{5}{9}", "\\frac{1}{3}", "\\frac{5}{12}", "\\frac{4}{11}", "\\frac{8}{15}"],
+        "answers": {
+            // Answers for calculations
+            "A": ["0.55", "0.555", "0.56", "0,55", "0,56"], // Recurring 0.555...
+            "B": ["0.33", "0.333", "0,33"],
+            "C": ["0.416", "0.417", "0.42", "0,416"], // 0.41666...
+            "D": ["0.36", "0.3636", "0,36"], // 0.3636...
+            "E": ["0.53", "0.533", "0,53"], // 0.5333...
+            // Correct order: 
+            // B (0.333), D (0.3636), C (0.416), E (0.533), A (0.555)
+            "sorting": ["\\frac{1}{3}", "\\frac{4}{11}", "\\frac{5}{12}", "\\frac{8}{15}", "\\frac{5}{9}"]
+        }
       },
       {
         "id": "Q6",
         "category": "Focus",
-        "instruction_mk": "Прочитај што вели Маркус. Дали Маркус е во право? Објасни го твојот одговор.",
+        "instruction_mk": "Прочитај што вели Марко. Дали тој е во право? Објасни го твојот одговор во полето подолу.",
         "prompt_en": "Read what Marcus says. Is Marcus correct? Explain your answer.",
         "speechBubble": {
-            "speaker": "Маркус",
+            "speaker": "Марко",
             "gender": "male",
             "text": "Знам дека $\\frac{1}{2}$ и $\\frac{2}{5}$ се периодични децимални броеви. Ова значи дека секоја дропка со именител 6 е исто така периодичен децимален број."
-        }
+        },
+        "freeTextInstruction": "Твоето објаснување:"
       },
       {
         "id": "Q7",
@@ -166,11 +217,10 @@ export const WORKSHEETS: Worksheet[] = [
         "instruction_mk": "Ова е дел од домашната задача на Су. (а) Користи калкулатор за да ја провериш домашната задача на Су. (б) Објасни ги сите грешки што таа ги направила и напиши ги точните одговори.",
         "prompt_en": "This is part of Su's homework. (a) Use a calculator to check Su's homework. (b) Explain any mistakes she has made and write the correct answers.",
         "math_elements_latex": [
-          "i) \\frac{7}{24}",
-          "ii) \\frac{8}{11}",
-          "iii) \\frac{18}{39}",
-          "iv) \\frac{5}{39}",
-          "\\text{Грешни одговори на Су: } 0.291\\overline{6}, 0.\\overline{72}, 0.1\\overline{6}, 0.12820\\overline{51}"
+          "i) \\;\\; \\frac{7}{24} = 0.291\\dot{6}",
+          "ii) \\;\\; \\frac{8}{11} = 0.\\dot{7}\\dot{2}",
+          "iii) \\;\\; \\frac{11}{18} = 0.1\\dot{6}",
+          "iv) \\;\\; \\frac{5}{39} = 0.128205\\dot{1}"
         ]
       },
       {
@@ -182,25 +232,37 @@ export const WORKSHEETS: Worksheet[] = [
             "speaker": "Зара",
             "gender": "female",
             "text": "Пресметав на мојот калкулатор дека $7 \\div 9 = 0.7777777778$. Ова значи дека $\\frac{7}{9}$ не е периодичен децимален број бидејќи седумките не продолжуваат засекогаш: на крајот има осумка."
-        }
+        },
+        "freeTextInstruction": "Дали Зара е во право? Објасни."
       },
       {
         "id": "Q11_Challenge",
         "category": "Challenge",
-        "instruction_mk": "Во еден клас има 27 ученици, 22 од нив се деснораки. Колкав дел од учениците се левораки? Напиши го одговорот како децимален број.",
-        "prompt_en": "There are 27 students in a class, 22 of them are right-handed. What fraction of the students are left-handed? Write your answer as a decimal.",
-        "math_elements_latex": [
-          "\\frac{5}{27}"
-        ]
+        "inputType": "fraction",
+        "instruction_mk": "Во еден клас има 27 ученици, 22 од нив се деснораки. Колкав дел од учениците се левораки? Внеси го одговорот како дропка во полињата.",
+        "prompt_en": "There are 27 students in a class, 22 of them are right-handed. What fraction of the students are left-handed? Write your answer as a fraction.",
+        "answers": {
+            "main": ["5/27"]
+        }
       },
       {
         "id": "Q12_Challenge",
         "category": "Challenge",
-        "instruction_mk": "Напиши ги овие броеви по големина, почнувајќи од најмалиот.",
+        "taskType": "sorting",
+        "instruction_mk": "Напиши ги овие броеви по големина, почнувајќи од најмалиот. (Повлечи за да подредиш).",
         "prompt_en": "Write these numbers in order of size, starting with the smallest.",
-        "math_elements_latex": [
-          "0.5\\overline{6}, 0.\\overline{6}, \\frac{2}{7}, 58.2\\%, \\frac{18}{55}, 0.5"
-        ]
+        "math_groups": [
+            {
+                "title": "Подреди ги броевите",
+                // Initial shuffled order or as presented in book
+                "items": ["0.5\\overline{6}", "0.\\overline{6}", "\\frac{2}{7}", "58.2\\%", "\\frac{18}{55}", "0.5"]
+            }
+        ],
+        "answers": {
+            // Correct order:
+            // 2/7 (0.285), 18/55 (0.327), 0.5 (0.5), 0.566... (0.566), 58.2% (0.582), 0.66... (0.66)
+            "main": ["\\frac{2}{7}", "\\frac{18}{55}", "0.5", "0.5\\overline{6}", "58.2\\%", "0.\\overline{6}"]
+        }
       },
       {
         "id": "Q13_Challenge",
@@ -212,13 +274,20 @@ export const WORKSHEETS: Worksheet[] = [
           {"b": "\\frac{13}{4}"},
           {"c": "\\frac{29}{9}"},
           {"d": "\\frac{35}{8}"}
-        ]
+        ],
+        "answers": {
+            "a": ["1.66", "1.666", "1,6", "1,66"],
+            "b": ["3.25", "3,25"],
+            "c": ["3.22", "3.222", "3,2", "3,22"],
+            "d": ["4.375", "4,375"]
+        }
       },
       {
         "id": "Q14_Challenge",
         "category": "Challenge",
-        "instruction_mk": "Напиши ја секоја должина на времето, во часови, како: (i) мешан број (ii) децимален број.",
-        "prompt_en": "Write each length of time, in hours, as: (i) a mixed number (ii) a decimal.",
+        "inputType": "mixed_number",
+        "instruction_mk": "Напиши ја секоја должина на времето, во часови, како мешан број. (Внеси го целиот број, потоа дропката).",
+        "prompt_en": "Write each length of time, in hours, as a mixed number.",
         "subtasks": [
           {"a": "3 \\text{ hours } 30 \\text{ minutes}"},
           {"b": "2 \\text{ hours } 45 \\text{ minutes}"},
@@ -229,7 +298,16 @@ export const WORKSHEETS: Worksheet[] = [
         ],
         "math_elements_latex": [
           "3 \\frac{30}{60} \\text{ (за a)}, 2 \\frac{45}{60} \\text{ (за b)} \\dots \\text{итн.}"
-        ]
+        ],
+        "answers": {
+            // Internally handled as "Whole Num/Den" or similar, let's standardize on "Whole Num/Den" string format for easy checking
+            "a": ["3 1/2", "3 30/60"],
+            "b": ["2 3/4", "2 45/60"],
+            "c": ["1 1/6", "1 10/60"],
+            "d": ["4 1/3", "4 20/60"],
+            "e": ["9 1/5", "9 12/60"],
+            "f": ["11 5/12", "11 25/60"]
+        }
       }
     ]
   }
